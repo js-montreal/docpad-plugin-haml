@@ -16,7 +16,7 @@ module.exports = (BasePlugin) ->
 				haml = require('haml')
 
 				# Render
-				opts.content = haml.render(opts.content, locals:templateData)
+				opts.content = haml(opts.content)(templateData)
 
 			# Done, return back to DocPad
 			return next()
